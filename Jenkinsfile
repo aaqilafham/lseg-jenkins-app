@@ -22,7 +22,7 @@ pipeline {
                 sh '''
                 echo  "With Docker"
                 ls -la
-                touch container-yes.txt
+                touch container-yes-ok.txt
                 '''
             }
         }
