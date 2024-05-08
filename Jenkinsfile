@@ -18,5 +18,12 @@ pipeline {
                 '''
             }
         }
+      stage ('FilesPath') {
+        steps {
+            sh '''
+             test -f build/index.html
+            '''
+        }
+      }   
     }
 }
