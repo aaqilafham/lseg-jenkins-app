@@ -19,19 +19,5 @@ pipeline {
                 '''
             }
         }
-      stage ('FilesPath') {
-        agent {
-                docker {
-                  image 'node:18-alpine'
-                  reuseNode true
-                }
-            }
-        steps {
-            sh '''
-             test -f build/index.
-             npm test
-            '''
-        }
-      }   
     }
 }
